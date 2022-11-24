@@ -1,5 +1,7 @@
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.HashMap;
+
 
 public class generic {
     public static void main(String[] args)  {
@@ -17,12 +19,11 @@ public class generic {
         b.set(10);
 
         System.out.println("a data : " + a.get());
-        System.out.println("<T> returnType : " + a.genericMethod(3).getClass().getName());  // 제네릭 메소드 Integer
 
         // 4. 제네릭 클래스가 왜 필요한가?
         // 바로 static method로 선언할때 필요하기 때문
         // static method는 객체가 생성되기 전에 메모리에 올라가는데 타입을 어떻게 얻을까? 이런 경우를 위해 타입을 주입받는 제네릭 메소드가 필요하다.
-        System.out.println("제네릭 메소드 <T> returnType : " + ClassName.genericMethod("Hi").getClass().getName());
+        //System.out.println("제네릭 메소드 <T> returnType : " + ClassName.genericMethod("Hi").getClass().getName());
 
         // 5. 특정 범위만 허용하고 나머지 타입만 제한할 수 없나?
         // 가능하다.
@@ -31,31 +32,47 @@ public class generic {
 
         // 6. 정렬 관련 클래스에서 아래처럼 <E extends Comparable<? super E>> 를 이용하는데 <? super E>는 왜 붙는걸까?
         // public class SaltClass <E extends Comparable<? super E>> { ... }	// 안전성이 높음
-        //
+        Student student1 = new Student(10, "홍길동");
+        System.out.println(student1.getName());
+
+        SaltClass<Student> s = new SaltClass<Student>();
     }
 }
 
-// 제네릭 클래스
-class ClassName<E> {
-    private E element;	// 제네릭 타입 변수
-    void set(E element) {	// 제네릭 파라미터 메소드
-        this.element = element;
-    }
-    E get() {	// 제네릭 타입 반환 메소드
-        return element;
-    }
-    static <T> T genericMethod(T o) {	// 제네릭 메소드
-        return o;
-    }
+class SaltClass <E extends Comparable<? super E>>{
+
 }
 
-class Student {
+class Person {
     int age;
+}
 
+class Student extends Person implements Comparable<Person> {
     String name;
 
     public Student(int age, String name) {
         this.age = age;
         this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int compareTo(Person p) {
+        return this.age - p.age;
+    }
+}
+
+// 제네릭 클래스
+class ClassName<호잇> {
+    private 호잇 element;    // 제네릭 타입 변수
+
+    void set(호잇 element) {    // 제네릭 파라미터 메소드
+        this.element = element;
+    }
+
+    호잇 get() {    // 제네릭 타입 반환 메소드
+        return element;
     }
 }
