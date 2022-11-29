@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7fe6f13d-b8e1-4667-be4d-a22efa98ad0c" name="변경" comment="Hello Java init">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/collection/arrayList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/collection/collection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/collection/hashMap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/collection/hashSet.java" afterDir="false" />
+    <list default="true" id="7fe6f13d-b8e1-4667-be4d-a22efa98ad0c" name="변경" comment="JAVA Collection">
+      <change afterPath="$PROJECT_DIR$/src/nextStep/StringCalculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/nextStep/StringCalculatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/generic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/generic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hello-java.iml" beforeDir="false" afterPath="$PROJECT_DIR$/test.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +20,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -41,10 +40,16 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -55,30 +60,23 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="nextStep" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="collection" />
     </key>
   </component>
-  <component name="RunManager" selected="애플리케이션.generic">
-    <configuration name="collection.array" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="collection.array" />
-      <module name="hello-java" />
+  <component name="RunManager" selected="JUnit.StringCalculatorTest">
+    <configuration name="CalculatorTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="nextStep.CalculatorTest" />
+      <module name="test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="collection.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="collection.arrayList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="collection.arrayList" />
-      <module name="hello-java" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="collection.*" />
+          <option name="PATTERN" value="nextStep.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -88,14 +86,14 @@
     </configuration>
     <configuration name="generic" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="generic" />
-      <module name="hello-java" />
+      <module name="test" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="hashMap" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="collection.hashMap" />
-      <module name="hello-java" />
+      <module name="test" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="collection.*" />
@@ -106,26 +104,57 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="hashSet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="collection.hashSet" />
-      <module name="hello-java" />
+    <configuration name="StringCalculatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="collection.*" />
+          <option name="PATTERN" value="nextStep.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="nextStep" />
+      <option name="MAIN_CLASS_NAME" value="nextStep.StringCalculatorTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StringCalculatorTest.add" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="nextStep.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="nextStep" />
+      <option name="MAIN_CLASS_NAME" value="nextStep.StringCalculatorTest" />
+      <option name="METHOD_NAME" value="add" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="test" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="test" />
+      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.StringCalculatorTest" />
+        <item itemvalue="JUnit.StringCalculatorTest.add" />
+        <item itemvalue="애플리케이션.CalculatorTest" />
         <item itemvalue="애플리케이션.generic" />
         <item itemvalue="애플리케이션.hashMap" />
-        <item itemvalue="애플리케이션.hashSet" />
-        <item itemvalue="애플리케이션.collection.arrayList" />
-        <item itemvalue="애플리케이션.collection.array" />
       </list>
     </recent_temporary>
   </component>
@@ -138,6 +167,7 @@
       <option name="presentableId" value="Default" />
       <updated>1669093838572</updated>
       <workItem from="1669093840414" duration="6175000" />
+      <workItem from="1669701015529" duration="3960000" />
     </task>
     <task id="LOCAL-00001" summary="Hello Java init">
       <created>1669093897089</created>
@@ -146,7 +176,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669093897089</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="JAVA Collection">
+      <created>1669273829170</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1669273829171</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -165,6 +202,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Hello Java init" />
-    <option name="LAST_COMMIT_MESSAGE" value="Hello Java init" />
+    <MESSAGE value="JAVA Collection" />
+    <option name="LAST_COMMIT_MESSAGE" value="JAVA Collection" />
   </component>
 </project>
