@@ -12,30 +12,30 @@ package nextStep;
  */
 
 public class StringCalculator {
-    int add(String content) throws Exception {
-        int result = 0;
-        String[] separatorArr = new String[] {",", ":", "\\"};
-        String separator = "";
+    int add(String text) throws Exception {
+        if(isBlack((text))) {
+            return 0;
+        }
+        String[] values = text.split(",|:");
+       return sum(values);
+    }
+    private boolean isBlack(String text) {
+        return text == null || text.isEmpty();
+    }
 
-        for(String str : separatorArr) {
-            if(content.indexOf(str) != -1) {
-                if(str == "\\") {
-                    separator = content.substring(content.indexOf(str) + 1, content.indexOf("\n"));
-                    content = content.substring(content.indexOf("\n") + 1);
-                } else {
-                    separator = str;
-                }
-                break;
-            }
+    private int sum(String[] values) {
+        int sum = 0;
+        for(String value : values) {
+            sum += toPositive(value);
         }
-        if(separator.isEmpty()) {
-            throw new Exception("구분자를 찾을 수 없습니다.");
-        }
+        return sum;
+    }
 
-        String[] strArr = content.split(separator);
-        for(String str : strArr) {
-            result += Integer.parseInt(str);
+    private int toPositive(String value) {
+        int num = Integer.parseInt(value);
+        if( num < 0) {
+            throw new RuntimeException();
         }
-       return result;
+        return num;
     }
 }
